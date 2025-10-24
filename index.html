@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPL | Estilo e Elegância</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-brand" data-target="home-section">
+                <i class="fas fa-gem logo-icon"></i>
+                <span class="logo-text">JPL</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#lancamentos" class="nav-link" data-target="home-section">Novidades</a></li>
+                    <li><a href="#categorias" class="nav-link" data-target="home-section">Categorias</a></li>
+                    <li><a href="#masculino" class="nav-link" data-target="home-section">Masculino</a></li>
+                    <li><a href="#feminino" class="nav-link" data-target="home-section">Feminino</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <button class="icon-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="icon-btn" id="account-link" data-target="account-section" aria-label="Minha Conta">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="icon-btn cart-btn" id="cart-link" data-target="cart-section" aria-label="Carrinho de Compras">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <section id="home-section" class="app-screen active">
+            
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>Sua Nova Jornada de Estilo.</h1>
+                    <p>Peças atemporais criadas com o máximo de sofisticação e qualidade.</p>
+                    <a href="#lancamentos" class="btn-primary">Descubra a Coleção</a>
+                </div>
+            </div>
+
+            <div id="lancamentos" class="products-section container">
+                <h2>Novidades Exclusivas</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <figure>
+                            <img src="https://i.pinimg.com/736x/21/85/9f/21859f40d4d6769694f9875ea0d03a1f.jpg" alt="Vestido Longo de Linho">
+                        </figure>
+                        <div class="card-details">
+                            <h3 class="product-name">Vestido Longo de Linho</h3>
+                            <p class="product-price">R$ 389,00</p>
+                            <button class="btn-secondary btn-add-cart" data-id="1">Adicionar</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <figure>
+                            <img src="https://i.pinimg.com/1200x/18/7b/33/187b33d4d51b4a9a2750d82094673e24.jpg" alt="Blazer Oversized Estruturado">
+                        </figure>
+                        <div class="card-details">
+                            <h3 class="product-name">Blazer Oversized Estruturado</h3>
+                            <p class="product-price">R$ 550,00</p>
+                            <button class="btn-secondary btn-add-cart" data-id="2">Adicionar</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <figure>
+                            <img src="https://i.pinimg.com/1200x/c2/50/d8/c250d87c33c8e6129735e6011492807d.jpg" alt="Tricô Gola Alta Minimalista">
+                        </figure>
+                        <div class="card-details">
+                            <h3 class="product-name">Tricô Gola Alta Minimalista</h3>
+                            <p class="product-price">R$ 199,00</p>
+                            <button class="btn-secondary btn-add-cart" data-id="3">Adicionar</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card">
+                        <figure>
+                            <img src="https://i.pinimg.com/1200x/43/49/8e/43498e7f5337d589ac5e247f970ffbae.jpg" alt="Calça de Alfaiataria">
+                        </figure>
+                        <div class="card-details">
+                            <h3 class="product-name">Calça de Alfaiataria</h3>
+                            <p class="product-price">R$ 279,00</p>
+                            <button class="btn-secondary btn-add-cart" data-id="4">Adicionar</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <figure>
+                            <img src="https://i.pinimg.com/736x/2c/84/86/2c8486c91e11b7464874e9f05fa6ea4c.jpg" alt="Jaqueta de Couro">
+                        </figure>
+                        <div class="card-details">
+                            <h3 class="product-name">Jaqueta de Couro</h3>
+                            <p class="product-price">R$ 899,00</p>
+                            <button class="btn-secondary btn-add-cart" data-id="5">Adicionar</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <figure>
+                            <img src="https://i.pinimg.com/1200x/dc/78/a1/dc78a1820417d87298ee1b714cf8c568.jpg" alt="Vestido Clássico Rosa">
+                        </figure>
+                        <div class="card-details">
+                            <h3 class="product-name">Vestido Clássico Rosa</h3>
+                            <p class="product-price">R$ 540,00</p>
+                            <button class="btn-secondary btn-add-cart" data-id="6">Adicionar</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+            <div class="cta-newsletter">
+                <div class="container">
+                    <h3>Receba 15% OFF na primeira compra.</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail aqui" required>
+                        <button type="submit" class="btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart-section" class="app-screen">
+            <div class="container cart-layout">
+                <div class="cart-items-list">
+                    <h2>🛒 Seu Carrinho</h2>
+                    
+                    <article class="cart-item">
+                        <img src="https://i.pinimg.com/736x/21/85/9f/21859f40d4d6769694f9875ea0d03a1f.jpg" alt="Vestido Longo">
+                        <div class="item-info">
+                            <h4>Vestido Longo de Linho</h4>
+                            <p>Tamanho: M | Cor: Marron</p>
+                            <div class="quantity-control">
+                                <button class="qty-btn" data-action="decrease">-</button>
+                                <input type="number" value="1" min="1" readonly>
+                                <button class="qty-btn" data-action="increase">+</button>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <p class="item-price">R$ 389,00</p>
+                            <button class="btn-remove-item"><i class="fas fa-trash"></i> Remover</button>
+                        </div>
+                    </article>
+
+                    <article class="cart-item">
+                        <img src="https://i.pinimg.com/1200x/c2/50/d8/c250d87c33c8e6129735e6011492807d.jpg" alt="Tricô Minimalista">
+                        <div class="item-info">
+                            <h4>Tricô Gola Alta Minimalista</h4>
+                            <p>Tamanho: G | Cor: Branca</p>
+                            <div class="quantity-control">
+                                <button class="qty-btn" data-action="decrease">-</button>
+                                <input type="number" value="1" min="1" readonly>
+                                <button class="qty-btn" data-action="increase">+</button>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <p class="item-price">R$ 199,00</p>
+                            <button class="btn-remove-item"><i class="fas fa-trash"></i> Remover</button>
+                        </div>
+                    </article>
+                    
+                </div>
+
+                <aside class="cart-summary-box">
+                    <h3>Resumo da Compra</h3>
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span class="value">R$ 588,00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Frete:</span>
+                        <span class="value">R$ 0,00 (Grátis)</span>
+                    </div>
+                    <div class="summary-line total">
+                        <strong>Total:</strong>
+                        <strong class="value-total">R$ 588,00</strong>
+                    </div>
+                    <button class="btn-primary btn-full-width">Finalizar Compra</button>
+                    <a href="#" class="continue-shopping" data-target="home-section">← Continuar Comprando</a>
+                </aside>
+            </div>
+        </section>
+
+        <section id="account-section" class="app-screen">
+            <div class="container account-layout">
+                <h2>👤 Minha Conta</h2>
+
+                <div class="account-grid">
+                    
+                    <div class="login-panel">
+                        <h3>Fazer Login</h3>
+                        <form class="login-form">
+                            <input type="email" placeholder="E-mail" required>
+                            <input type="password" placeholder="Senha" required>
+                            <button type="submit" class="btn-primary btn-full-width">Acessar Conta</button>
+                        </form>
+                        <p class="minor-action"><a href="#">Esqueci minha senha</a></p>
+                        <div class="separator">Ou</div>
+                        <button class="btn-secondary btn-full-width">Criar Nova Conta</button>
+                    </div>
+
+                    <div class="profile-panel">
+                        <h3>Menu do Cliente</h3>
+                        <nav class="profile-nav">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-clipboard-list"></i> Meus Pedidos</a></li>
+                                <li><a href="#"><i class="fas fa-heart"></i> Lista de Desejos</a></li>
+                                <li><a href="#"><i class="fas fa-map-marker-alt"></i> Meus Endereços</a></li>
+                                <li><a href="#"><i class="fas fa-credit-card"></i> Formas de Pagamento</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+                            </ul>
+                        </nav>
+                        <button class="btn-logout"><i class="fas fa-sign-out-alt"></i> Sair da Conta</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>JPL</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ajuda e Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Rastrear Pedido</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <p class="copyright-info">&copy; 2025 JPL Moda. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const screenLinks = document.querySelectorAll('[data-target]');
+            const appScreens = document.querySelectorAll('.app-screen');
+            const mainContent = document.querySelector('.main-content');
+            const homeSection = document.getElementById('home-section');
+
+            // Função para alternar as telas
+            function switchScreen(targetId, smoothScroll = false) {
+                appScreens.forEach(screen => {
+                    screen.classList.remove('active');
+                });
+                const targetScreen = document.getElementById(targetId);
+                if (targetScreen) {
+                    targetScreen.classList.add('active');
+                    
+                    // Rola a tela para o topo da seção principal ao trocar de "página"
+                    mainContent.scrollTop = 0; 
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // Se for para a home e houver um hash (como #lancamentos), rola
+                    if (targetId === 'home-section' && smoothScroll) {
+                        const hash = new URL(smoothScroll).hash;
+                        if (hash) {
+                            setTimeout(() => {
+                                document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
+                            }, 50);
+                        }
+                    }
+                }
+            }
+
+            // Adicionar ouvintes de evento aos botões de navegação
+            screenLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = e.currentTarget.getAttribute('data-target');
+                    
+                    if (e.currentTarget.classList.contains('nav-link')) {
+                        // Se for um link de navegação da Home, trata a rolagem interna
+                        switchScreen(targetId, e.currentTarget.href); 
+                    } else if (targetId) {
+                        // Links diretos (Carrinho, Conta, Logo)
+                        switchScreen(targetId);
+                    }
+                });
+            });
+
+            // Lógica de Carrinho (Simulação de contador)
+            const cartCountElement = document.querySelector('.cart-count');
+            const addButtons = document.querySelectorAll('.btn-add-cart');
+            let cartCount = parseInt(cartCountElement.textContent);
+
+            addButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    cartCount++;
+                    cartCountElement.textContent = cartCount;
+                    
+                    button.textContent = '✅ Adicionado';
+                    button.disabled = true;
+                    setTimeout(() => {
+                        button.textContent = 'Adicionar';
+                        button.disabled = false;
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,670 @@
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS                */
+/* ================================================= */
+
+:root {
+    --primary-color: #96C2DB; /* Azul JPL: Elegância e Confiança */
+    --secondary-color: #FFFFFF; /* Branco: Limpeza e Minimalismo */
+    --accent-color: #2c3e50; /* Azul Escuro: Textos e Fundos de Destaque */
+    --text-dark: #333333;
+    --text-light: #f4f4f4;
+    --border-light: #e0e0e0;
+    --spacing-default: 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--secondary-color);
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-default);
+}
+
+/* Estilo para todas as "telas" do site */
+.app-screen {
+    display: none;
+    min-height: 80vh;
+    padding-bottom: 50px;
+}
+
+.app-screen.active {
+    display: block;
+}
+
+/* Estilos de Botões */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border-color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-color: var(--primary-color);
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+/* ================================================= */
+/* 1. HEADER E NAV                  */
+/* ================================================= */
+
+.main-header {
+    background-color: var(--secondary-color);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 var(--spacing-default);
+}
+
+/* Logo */
+.logo-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo-icon {
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.logo-text {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Menu */
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    padding: 5px 0;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Ações do Usuário */
+.user-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: var(--primary-color);
+}
+
+.cart-btn {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    line-height: 1;
+    font-weight: bold;
+}
+
+/* ================================================= */
+/* 2. TELA HOME                     */
+/* ================================================= */
+
+/* Banner */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.pinimg.com/1200x/4d/f4/7b/4df47b3354aa2a01b29c8bff4a886a6c.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* Seção de Produtos */
+.products-section {
+    padding: 40px 0;
+}
+
+.products-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.card-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Newsletter CTA */
+.cta-newsletter {
+    background-color: var(--accent-color);
+    padding: 50px 0;
+    margin-top: 50px;
+}
+
+.cta-newsletter h3 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    width: 350px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* ================================================= */
+/* 3. TELA CARRINHO                  */
+/* ================================================= */
+
+.cart-layout {
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+}
+
+.cart-items-list {
+    flex: 2; /* Ocupa 2/3 da largura */
+}
+
+.cart-summary-box {
+    flex: 1; /* Ocupa 1/3 da largura */
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.cart-items-list h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+}
+
+.cart-summary-box h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-light);
+    gap: 20px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 4px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h4 {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.qty-btn {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    margin: 0 5px;
+    padding: 5px 0;
+}
+
+.item-actions {
+    text-align: right;
+}
+
+.item-price {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.btn-remove-item {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Resumo */
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.summary-line.total {
+    font-size: 1.4rem;
+    border-top: 1px dashed var(--border-light);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.value-total {
+    color: var(--primary-color);
+}
+
+.continue-shopping {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-dark);
+}
+
+.continue-shopping:hover {
+    color: var(--primary-color);
+}
+
+/* ================================================= */
+/* 4. TELA CONTA                    */
+/* ================================================= */
+
+.account-layout {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.account-layout h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.login-panel, .profile-panel {
+    padding: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.login-panel h3, .profile-panel h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: var(--border-light);
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
+
+.minor-action {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.profile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.profile-nav a {
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+}
+
+.profile-nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-color: var(--primary-color);
+}
+
+.profile-nav i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.profile-nav a:hover i {
+    color: var(--accent-color);
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* 5. FOOTER                     */
+/* ================================================= */
+
+.main-footer {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 40px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.footer-col a:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: var(--text-light);
+}
+
+.copyright-info {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ================================================= */
+/* 6. RESPONSIVIDADE                 */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+    .cart-layout {
+        flex-direction: column;
+    }
+    .cart-summary-box {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .main-nav ul {
+        justify-content: space-around;
+        gap: 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-banner {
+        height: 50vh;
+    }
+
+    .account-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        width: 80%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .cart-item {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .cart-item img {
+        margin-bottom: 10px;
+    }
+    .item-info, .item-actions {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .item-price {
+        margin-bottom: 5px;
+    }
+    .quantity-control {
+        justify-content: center;
+    }
+}

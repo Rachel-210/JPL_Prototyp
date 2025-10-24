@@ -1,6 +1,7 @@
 # JPL_Protótipo💎
-Olá! Este repositório apresenta o protótipo *front-end* de uma loja virtual de moda com foco em um design minimalista, paleta de cores neutras/pastel e uma experiência de usuário limpa.
+Olá! Este repositório apresenta o protótipo *front-end* de uma loja virtual de moda com foco em um design minimalista, paleta de cores neutras/pastel e uma experiência de usuário limpa. Além disso, a um PDF com descricões mais específicas envolvendo funcionalidades e diagramas. Abaixo será apresentado um video explicativo do nosso projeto em geral, além de uma pequena descrição do nosso site e seu protótipo real.
 ***
+🎥 **VISUALIZE O VIDEO EXPLICATIVO AQUI:** 
 
 ## 🌟 Projeto JPL: Vitrine Minimalista e Moderna
 🔗 **VISUALIZE O PROTÓTIPO AQUI:** https://rachel-210.github.io/JPL_Prototyp/

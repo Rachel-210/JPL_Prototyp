@@ -3,7 +3,7 @@ Olá! Este repositório apresenta o protótipo *front-end* de uma loja virtual d
 ***
 🎥 **VISUALIZE O VIDEO EXPLICATIVO AQUI:** https://www.canva.com/design/DAG2v20yEVg/yXY5MEvnrvMZ1alu3sfekw/edit?utm_content=DAG2v20yEVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-💾 **VISUALIZE O VIDEO EXPLICATIVO AQUI:** https://drive.google.com/file/d/1STWl16l9G1e3BB4GdrGFeFuOoLFBfzRM/view?usp=sharing
+💾 **VISUALIZE O PDF AQUI:** https://drive.google.com/file/d/1STWl16l9G1e3BB4GdrGFeFuOoLFBfzRM/view?usp=sharing
 
 ## 🌟 Projeto JPL: Vitrine Minimalista e Moderna
 🔗 **VISUALIZE O PROTÓTIPO AQUI:** https://rachel-210.github.io/JPL_Prototyp/

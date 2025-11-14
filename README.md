@@ -1,7 +1,6 @@
 # JPL_Protótipo💎
-Olá! Este repositório apresenta o protótipo *front-end* de uma loja virtual de moda com foco em um design minimalista, paleta de cores neutras/pastel e uma experiência de usuário limpa. Além disso, a um PDF com descricões mais específicas envolvendo funcionalidades e diagramas. Abaixo será apresentado o link tanto do nosso video explicativo, quanto do PDF do nosso projeto, além de uma pequena descrição do nosso site e seu protótipo real.
+Olá! Este repositório apresenta o protótipo *front-end* de uma loja virtual de moda com foco em um design minimalista, paleta de cores neutras/pastel e uma experiência de usuário limpa. Além disso, a um PDF com descricões mais específicas envolvendo funcionalidades e diagramas.
 ***
-🎥 **VISUALIZE O VIDEO EXPLICATIVO AQUI:** https://www.canva.com/design/DAG2v20yEVg/yXY5MEvnrvMZ1alu3sfekw/edit?utm_content=DAG2v20yEVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 💾 **VISUALIZE O PDF AQUI:** https://drive.google.com/file/d/1STWl16l9G1e3BB4GdrGFeFuOoLFBfzRM/view?usp=sharing
 

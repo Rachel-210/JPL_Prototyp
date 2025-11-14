@@ -276,11 +276,9 @@
                 if (targetScreen) {
                     targetScreen.classList.add('active');
                     
-                    // Rola a tela para o topo da seção principal ao trocar de "página"
                     mainContent.scrollTop = 0; 
                     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                    // Se for para a home e houver um hash (como #lancamentos), rola
                     if (targetId === 'home-section' && smoothScroll) {
                         const hash = new URL(smoothScroll).hash;
                         if (hash) {
@@ -292,23 +290,19 @@
                 }
             }
 
-            // Adicionar ouvintes de evento aos botões de navegação
             screenLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const targetId = e.currentTarget.getAttribute('data-target');
                     
                     if (e.currentTarget.classList.contains('nav-link')) {
-                        // Se for um link de navegação da Home, trata a rolagem interna
                         switchScreen(targetId, e.currentTarget.href); 
                     } else if (targetId) {
-                        // Links diretos (Carrinho, Conta, Logo)
                         switchScreen(targetId);
                     }
                 });
             });
 
-            // Lógica de Carrinho (Simulação de contador)
             const cartCountElement = document.querySelector('.cart-count');
             const addButtons = document.querySelectorAll('.btn-add-cart');
             let cartCount = parseInt(cartCountElement.textContent);
@@ -330,4 +324,5 @@
     </script>
 
 </body>
+
 </html>
